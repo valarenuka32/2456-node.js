@@ -6,7 +6,7 @@ const categorySchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        category_des: {
+        category_desc: {
             type: String,
             trim: true,
         },
@@ -22,4 +22,5 @@ const categorySchema = new mongoose.Schema(
 );
 
 const category = mongoose.model("categorys", categorySchema);
+
 module.exports = category;
