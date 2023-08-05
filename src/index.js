@@ -1,3 +1,11 @@
+const express = require("express");
+const { connectDB } = require("./db/dbConnection");
+const config = require("./config/config");
+
+
+/** Database connection */
+connectDB()
+
 // express using create server
 
 // const express = require('express');
@@ -13,7 +21,7 @@
 // });
 // app.listen(7002);
 
-// http using create server 
+// http using create server
 
 var http = require("http");
 var fs = require("fs");
