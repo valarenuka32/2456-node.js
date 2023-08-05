@@ -5,7 +5,7 @@ const routes = require("./routes/v1");
 const config = require("./config/config");
 
 
-/** Database connection */
+// Database connection
 connectDB()
 
 app.use("/v1",routes);
