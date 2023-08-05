@@ -1,3 +1,4 @@
+var http = require("http");
 const express = require("express");
 const { connectDB } = require("./db/dbConnection");
 const config = require("./config/config");
@@ -23,7 +24,7 @@ connectDB()
 
 // http using create server
 
-var http = require("http");
+
 var fs = require("fs");
 
 http.createServer(function (req, res) {

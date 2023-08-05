@@ -6,7 +6,7 @@ module.exports = {
     port: envVars.PORT,
     mongodb: {
         url: envVars.MONGODB_URL,
-        Option: {
+        options: {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         },
