@@ -4,7 +4,7 @@ const { connectDB } = require("./db/dbConnection");
 const config = require("./config/config");
 
 
-/** Database connection */
+// Database connection
 connectDB()
 
 // express using create server
