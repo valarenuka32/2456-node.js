@@ -28,6 +28,6 @@ const productSchema = new mongoose.Schema(
         versionKey: false,
     }
 );
-const product = mongoose.Model("products", productSchema);
+const product = mongoose.model("products", productSchema);
 
 module.exports = product;

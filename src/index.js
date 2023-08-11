@@ -1,12 +1,13 @@
 var http = require("http");
 const express = require("express");
 const { connectDB } = require("./db/dbConnection");
-const routes = require("./routes/v1");
+const routes = require("./routes");
 const config = require("./config/config");
 
 
 // Database connection
 connectDB()
+
 
 app.use("/v1",routes);
 
