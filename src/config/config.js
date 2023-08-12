@@ -10,15 +10,13 @@ const envVarsSchema = joi.object({
 }).unknown();
 
 const { value: envVars, error } = envVarsSchema
-<<<<<<< HEAD
     .prefs({ errors: { label: "key" } })
     .validate(process.env);
 
 if (error) {
     console.log("Config Error: ", error);
 }
-=======
->>>>>>> c3eace834b8708bc309dde19fec9e7123b29b199
+
 
 module.exports = {
     port: envVars.PORT,
