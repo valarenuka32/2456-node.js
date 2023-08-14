@@ -2,7 +2,7 @@ var http = require("http");
 const express = require("express");
 const { connectDB } = require("./db/dbConnection");
 const routes = require("./routes");
-const config = require("./config/config");
+const config=require("./config/config");
 
 
 // Database connection
