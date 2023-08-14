@@ -1,11 +1,8 @@
 const express = require("express");
-<<<<<<< HEAD
-const { userValidation }=require("../validations")
+const { userValidation }=require("../validations");
 const { userController } = require("../controllers");
 const validate = require("../middlewares/validate");
-=======
-const { userController } = require("../controllers");
->>>>>>> c3eace834b8708bc309dde19fec9e7123b29b199
+
 
 const router = express.Router();
 
