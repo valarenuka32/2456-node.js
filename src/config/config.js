@@ -13,9 +13,9 @@ const { value: envVars, error } = envVarsSchema
     .prefs({ errors: { label: "key" } })
     .validate(process.env);
 
-if (error) {
-    console.log("Config Error: ", error);
-}
+// if (error) {
+//     console.log("Config Error: ", error);
+// }
 
 
 module.exports = {

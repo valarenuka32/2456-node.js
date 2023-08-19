@@ -5,7 +5,7 @@ const { userService } = require("../Service");
 const createUser = async (req, res) => {
     try {
         const reqBody = req.body;
-        // console.log(reqBody);
+        console.log(reqBody);
         // const userExists = await userService.getUserByEmail(reqBody.email);
         // if (userExists) {
         //   throw new Error("User already created by this email!");

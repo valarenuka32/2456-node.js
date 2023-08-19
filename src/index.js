@@ -31,13 +31,13 @@ app.use("/v1",routes);
 // http using create server
 
 
-var fs = require("fs");
+// var fs = require("fs");
 
-http.createServer(function (req, res) {
-  fs.readFile('text.html', function (err, data) {
-    res.writeHead(200, { 'content-type': 'test.html' });
-    res.write(data);
-    return res.end();
-  });
-}).listen(4050);
+// http.createServer(function (req, res) {
+//   fs.readFile('text.html', function (err, data) {
+//     res.writeHead(200, { 'content-type': 'test.html' });
+//     res.write(data);
+//     return res.end();
+//   });
+// }).listen(4050);
 
