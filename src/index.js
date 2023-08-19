@@ -2,7 +2,7 @@ var http = require("http");
 const express = require("express");
 const { connectDB } = require("./db/dbConnection");
 const routes = require("./routes");
-const config=require("./config/config");
+const config = require("./config/config");
 
 
 // Database connection
@@ -11,7 +11,7 @@ connectDB()
 const app = express();
 
 // namespace
-app.use("/v1",routes);
+app.use("/v1", routes);
 
 // express using create server
 
@@ -42,9 +42,9 @@ app.use("/v1",routes);
 //   });
 // }).listen(4050);
 
-const server=http.createServer(app);
+const server = http.createServer(app);
 
-server.listen(config.port,() =>{
+server.listen(config.port, () => {
     console.log(`server is started PORT NO :  ${config.port}`);
 });
 

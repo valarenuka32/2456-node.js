@@ -37,6 +37,6 @@ const getbookList = async (req, res) => {
   }
 }
 module.exports = {
-    createBook,
-    getbookList
+  createBook,
+  getbookList
 };

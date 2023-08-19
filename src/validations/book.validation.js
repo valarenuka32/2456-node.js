@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-/** create user */
+/** create book */
 const createBook = {
   body: Joi.object().keys({
     book_name: Joi.string().required().trim(),
@@ -9,7 +9,7 @@ const createBook = {
   }),
 };
 
-// get user list
+// get book list
 const getbookList = {
   query: Joi.object().keys({
     search: Joi.string().trim().allow(""),
@@ -20,6 +20,6 @@ const getbookList = {
 };
 
 module.exports = {
-    createBook,
-    getbookList
+  createBook,
+  getbookList
 };
