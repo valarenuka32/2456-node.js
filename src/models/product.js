@@ -15,7 +15,7 @@ const productSchema = new mongoose.Schema(
             trim: true,
         },
         product_desc: {
-            type: Number,
+            type: String,
             trim: true,
         },
         is_active: {
