@@ -16,7 +16,7 @@ const createBook = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: 'book crte succesfully',
+      message: 'book creat succesfully',
       data: { book },
     });
   } catch (error) {
@@ -39,4 +39,4 @@ const getbookList = async (req, res) => {
 module.exports = {
     createBook,
     getbookList
-}
+};

@@ -42,11 +42,11 @@ app.use("/v1",routes);
 //   });
 // }).listen(4050);
 
-// const server=http.createServer(app);
+const server=http.createServer(app);
 
-// server.listen(config.port,() =>{
-//     console.log(`server is started PORT NO :`);
-// });
+server.listen(config.port,() =>{
+    console.log(`server is started PORT NO :  ${config.port}`);
+});
 
 
 
