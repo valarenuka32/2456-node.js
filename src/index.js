@@ -10,6 +10,7 @@ connectDB()
 
 const app = express();
 
+// namespace
 app.use("/v1",routes);
 
 // express using create server
@@ -40,4 +41,12 @@ app.use("/v1",routes);
 //     return res.end();
 //   });
 // }).listen(4050);
+
+// const server=http.createServer(app);
+
+// server.listen(config.port,() =>{
+//     console.log(`server is started PORT NO :`);
+// });
+
+
 
