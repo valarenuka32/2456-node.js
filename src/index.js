@@ -8,6 +8,7 @@ const config=require("./config/config");
 // Database connection
 connectDB()
 
+const app = express();
 
 app.use("/v1",routes);
 
@@ -15,7 +16,8 @@ app.use("/v1",routes);
 
 // const express = require('express');
 // const fs = require('fs');
-const app = express();
+
+
 
 // app.get('/', function (req, res) {
 //   fs.readFile('text.html', function (err, data) {
@@ -38,3 +40,4 @@ http.createServer(function (req, res) {
     return res.end();
   });
 }).listen(4050);
+
