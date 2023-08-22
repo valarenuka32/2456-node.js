@@ -26,7 +26,18 @@ const createBook = async (req, res) => {
 // Get book list
 const getbookList = async (req, res) => {
   try {
+    // const { search, ...options } = req.query;
+    // let filter = {};
+
+    // if (search) {
+    //     filter.$or = [
+    //         { first_name: { $regex: search, $options: "i" } },
+    //         { last_name: { $regex: search, $options: "i" } },
+    //     ];
+    // }
+
     const getDetails = await bookService.getbookList(req, res);
+
     res.status(200).json({
       success: true,
       message: "book details get successfully!",

@@ -10,7 +10,7 @@ const createBook = async (reqBody) => {
 };
 
 const getbookList = async (req, res) => {
-  return book.find();
+  return User.find();
 }
 module.exports = {
     createBook,
