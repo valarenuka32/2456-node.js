@@ -21,8 +21,8 @@ const getbookId = async (bookId) => {
   return book.findById(bookId);
 };
 
-const updatedetils=async(bookId,updateBody)=>{
- return book.findByIdAndUpdate(bookId,{$set : updateBody})
+const updatedetils = async (bookId, updateBody) => {
+  return book.findByIdAndUpdate(bookId, { $set: updateBody })
 }
 module.exports = {
   createBook,
