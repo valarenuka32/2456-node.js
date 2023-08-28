@@ -12,7 +12,7 @@ const bookSchema = new mongoose.Schema(
         },
         book_price: {
             type: Number,
-            trim: true,
+            default:0,
         },
         is_active: {
             type: Boolean,

@@ -1,5 +1,6 @@
 var http = require("http");
 const express = require("express");
+const bodyParser=require("body-parser");
 const { connectDB } = require("./db/dbConnection");
 const routes = require("./routes");
 const config = require("./config/config");
@@ -9,6 +10,10 @@ const config = require("./config/config");
 connectDB()
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.json());
 
 // namespace
 app.use("/v1", routes);

@@ -10,9 +10,19 @@ const createBook = async (reqBody) => {
 };
 
 const getbookList = async (req, res) => {
-  return User.find();
-}
+  return book.find();
+};
+
+const deleteRecored=async(bookId)=>{
+  return book.findByIdAndDelete(bookId);
+};
+
+const getbookId=async(bookId)=>{
+   return book.findById(bookId);
+};
 module.exports = {
     createBook,
-    getbookList
+    getbookList,
+    deleteRecored,
+    getbookId
 };
