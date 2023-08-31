@@ -18,6 +18,10 @@ const productSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        category_name: {
+            type: mongoose.Types.ObjectId,
+            ref: "categorys",
+        },
         is_active: {
             type: Boolean,
             default: true,
