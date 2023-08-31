@@ -23,11 +23,16 @@ const getbookId = async (bookId) => {
 
 const updatedetils = async (bookId, updateBody) => {
   return book.findByIdAndUpdate(bookId, { $set: updateBody })
+};
+
+const getBookByName = async (book_name) => {
+  return book.findOne({ book_name });
 }
 module.exports = {
   createBook,
   getbookList,
   deleteRecored,
   getbookId,
-  updatedetils
+  updatedetils,
+  getBookByName
 };

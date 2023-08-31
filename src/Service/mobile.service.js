@@ -20,10 +20,15 @@ const updateDetiles = async (mobileId, updateBody) => {
     return mobile.findByIdAndUpdate(mobileId, { $set: updateBody })
 };
 
+const getMobileByName = async (mobile_brand) => {
+    return mobile.findOne({ mobile_brand });
+};
+
 module.exports = {
     mobileCreate,
     getMobileList,
     deleteRecord,
     getmobileId,
-    updateDetiles
+    updateDetiles,
+    getMobileByName
 }

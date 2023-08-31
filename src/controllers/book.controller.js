@@ -4,15 +4,12 @@ const createBook = async (req, res) => {
   try {
     const reqBody = req.body;
     console.log(reqBody);
-    // const userExists = await userService.getUserByEmail(reqBody.email);
-    // if (userExists) {
-    //   throw new Error("User already created by this email!");
-    // }
 
-    const book = await bookService.createBook(reqBody);
-    if (!book) {
-      throw new Error("Something went wrong, please try again or later!");
+    const bookex = await bookService.getBookByName(reqBody.book_name);
+    if (bookex) {
+      throw new Error(`please add other book this ${bookex.book_name} book already created`)
     }
+    const book = await bookService.createBook(reqBody);
 
     res.status(200).json({
       success: true,

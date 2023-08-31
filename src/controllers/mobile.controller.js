@@ -5,10 +5,12 @@ const mobileCreate = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        const mobile = await mobileService.mobileCreate(reqBody);
-        if (!mobile) {
-            throw new Error("Something went wrong, please try again or later!");
+        const mobileex=await mobileService.getMobileByName(reqBody.mobile_brand);
+        if(mobileex){
+            throw new Error(`please add other mobile this ${mobileex.mobile_brand} mobile already created`)
         }
+
+        const mobile = await mobileService.mobileCreate(reqBody);
 
         res.status(200).json({
             success: true,
