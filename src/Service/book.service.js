@@ -27,7 +27,7 @@ const updatedetils = async (bookId, updateBody) => {
 
 const getBookByName = async (book_name) => {
   return book.findOne({ book_name });
-}
+};
 module.exports = {
   createBook,
   getbookList,
