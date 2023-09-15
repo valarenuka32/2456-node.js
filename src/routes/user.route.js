@@ -3,10 +3,10 @@ const { userValidation } = require("../validation");
 const { usercontroller } = require("../controllers");
 const validate = require("../middlewares/validate");
 
-const route = express.Router();
+const router = express.Router();
 
 // create user
-route.post(
+router.post(
     "/create-user",
     validate(userValidation.createUser),
     usercontroller.createUser
@@ -14,24 +14,21 @@ route.post(
 
 
 // get user list
-route.get(
+router.get(
     "/list",
-    validate(userValidation.userList),
-    usercontroller.userlist
+    usercontroller.userList
 );
 
 // update
-route.put(
+router.put(
     "/update/:userId",
-    validate(userValidation.updateDetiles),
     usercontroller.updateDetiles
 );
 
 // delete
-route.delete(
+router.delete(
     "/delete/:userId",
-    validate(userValidation.deleteRecode),
     usercontroller.deleteRecode
 );
 
-module.exports = route;
+module.exports = router;

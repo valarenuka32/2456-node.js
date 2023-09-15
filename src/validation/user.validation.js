@@ -10,4 +10,6 @@ const createUser = {
     }),
 };
 
-module.exports = { createUser };
+module.exports = {
+     createUser 
+};
