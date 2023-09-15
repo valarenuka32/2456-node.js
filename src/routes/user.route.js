@@ -1,6 +1,6 @@
 const express = require("express");
 const { userValidation } = require("../validation");
-const { usercontroller } = require("../controllers");
+const { userController } = require("../controllers");
 const validate = require("../middlewares/validate");
 
 const router = express.Router();
@@ -9,26 +9,26 @@ const router = express.Router();
 router.post(
     "/create-user",
     validate(userValidation.createUser),
-    usercontroller.createUser
+    userController.createUser
 );
 
 
 // get user list
 router.get(
     "/list",
-    usercontroller.userList
+    userController.userList
 );
 
 // update
 router.put(
     "/update/:userId",
-    usercontroller.updateDetiles
+    userController.updateDetiles
 );
 
 // delete
 router.delete(
     "/delete/:userId",
-    usercontroller.deleteRecode
+    userController.deleteRecode
 );
 
 module.exports = router;

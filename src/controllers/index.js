@@ -1,1 +1,1 @@
-module.exports.usercontroller=require("./user.controler");
+module.exports.userController=require("./user.controler");

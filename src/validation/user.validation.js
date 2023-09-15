@@ -11,5 +11,5 @@ const createUser = {
 };
 
 module.exports = {
-     createUser 
+    createUser
 };
