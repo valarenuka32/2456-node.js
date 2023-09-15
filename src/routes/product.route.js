@@ -21,7 +21,7 @@ router.get(
 // update product
 router.put(
     "/update-product/:productId",
-    productController.updareDetiles
+    productController.updateDetiles
 );
 
 // delete product

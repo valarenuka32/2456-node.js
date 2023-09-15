@@ -29,7 +29,7 @@ const userList = async (req, res) => {
 
         res.success(200).json({
             success: true,
-            message: error.message,
+            message: "user list get successfully",
             data: (getList)
         });
     } catch (error) {
