@@ -38,9 +38,28 @@ const productList = async (req, res) => {
 };
 
 // update product
-// const updateDetiles
+const updateDetiles = async (req, res) => {
+    try {
+        const productId = req.params.productId;
+
+        const productEx = await productService.getproductById(productId);
+        if (!productEx) {
+            throw new Error("product not found");
+        }
+        await productService.updateDetiles(productId, req.body);
+        res.status(200).json({
+            success: true,
+            message: "product detiles update "
+        })
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message })
+    }
+};
+
+// delete recode
 
 module.exports = {
     createProduct,
-    productList
+    productList,
+    updateDetiles
 }
