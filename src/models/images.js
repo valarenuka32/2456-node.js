@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const config = require("../config/config");
 
 const imagesSchema = new mongoose.Schema(
     {
@@ -18,6 +19,13 @@ const imagesSchema = new mongoose.Schema(
     {
         timestamps: true,
         versionKey: false,
+        toJSON: {
+            transform: function (doc, data) {
+                if (data?.image) {
+                    data.image = `${config.base_url}image/${data.image}`;
+                }
+            },
+        },
     }
 );
 
