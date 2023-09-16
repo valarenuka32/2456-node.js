@@ -14,6 +14,9 @@ app.use(bodyparser.urlencoded({ extended: false }));
 
 app.use(bodyparser.json());
 
+/** Get image */
+app.use(express.static(`./public`));
+
 app.use("/v1",routes);
 
 const server = http.createServer(app);

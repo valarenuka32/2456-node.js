@@ -1,12 +1,11 @@
 const joi = require("joi");
 const dotenv = require("dotenv");
-const Joi = require("joi");
 
 dotenv.config();
 
 const envVarsSchema = joi.object({
     PORT: joi.number().default(5000),
-    MONGODB_URL: Joi.string().trim().description("mongoodb url"),
+    MONGODB_URL: joi.string().trim().description("mongoodb url"),
     BASE_URL: joi.string().trim().description("BASE_URL"),
 }).unknown();
 

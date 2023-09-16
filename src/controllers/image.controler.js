@@ -7,7 +7,7 @@ const createImage = async (req, res) => {
         console.log(reqBody);
 
         if (req.file) {
-            reqBody.images = req.file.filename;
+            reqBody.image = req.file.filename;
         } else {
             throw new Error(" image is required");
         }
