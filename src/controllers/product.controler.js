@@ -57,9 +57,27 @@ const updateDetiles = async (req, res) => {
 };
 
 // delete recode
+const deleteRecode = async (req, res) => {
+    try {
+        const productId = req.params.productId;
+        const productEx=await productService.getproductById(productId);
+        if(!productEx){
+            throw new Error ("product not found");
+        }
+        await productService.deleteRecode(productId,req.body);
+        res.status(200).json({
+            success:true,
+            message:"product delete successfully !"
+        })
+
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+};
 
 module.exports = {
     createProduct,
     productList,
-    updateDetiles
+    updateDetiles,
+    deleteRecode
 }
