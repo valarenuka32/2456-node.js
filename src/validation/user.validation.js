@@ -9,7 +9,16 @@ const createUser = {
         email: Joi.string().required(),
     }),
 };
+const userList = {
+    query: Joi.object({
+      search: Joi.string().trim().allow(""),
+      sortBy: Joi.string().trim().allow(""),
+      limit: Joi.number().integer().allow("").default(10),
+      page: Joi.number().integer().allow("").default(1),
+    }),
+  };
 
 module.exports = {
-    createUser
+    createUser,
+    userList
 };
