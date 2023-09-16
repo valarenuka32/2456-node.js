@@ -49,7 +49,7 @@ const updateDetiles = async (req, res) => {
         await productService.updateDetiles(productId, req.body);
         res.status(200).json({
             success: true,
-            message: "product detiles update "
+            message: "product detiles update successfully! "
         })
     } catch (error) {
         res.status(400).json({ success: false, message: error.message })

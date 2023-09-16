@@ -18,7 +18,7 @@ const deleteRecode = async (productId) => {
 };
 
 const getproductById = async (productId) => {
-    return productId.findById(productId);
+    return product.findById(productId);
 };
 
 module.exports = {
