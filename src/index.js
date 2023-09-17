@@ -4,7 +4,7 @@ const fs = require("fs");
 const bodyparser = require("body-parser");
 const config = require("./config/config");
 const { connectDB } = require("./db/dbconnetion");
-const routes=require("./routes");
+const routes = require("./routes");
 
 const app = express();
 // database connection
@@ -17,7 +17,7 @@ app.use(bodyparser.json());
 /** Get image */
 app.use(express.static(`./public`));
 
-app.use("/v1",routes);
+app.use("/v1", routes);
 
 const server = http.createServer(app);
 

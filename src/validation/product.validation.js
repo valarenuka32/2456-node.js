@@ -8,7 +8,7 @@ const createProduct = {
         product_desc: Joi.string().required().trim(),
         price: Joi.number().required(),
         quality: Joi.number().required(),
-        images:Joi.string(),
+        images: Joi.string(),
     })
 };
 

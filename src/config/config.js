@@ -6,7 +6,7 @@ dotenv.config();
 const envVarsSchema = joi.object({
     PORT: joi.number().default(7000),
     MONGODB_URL: joi.string().trim().description("mongoodb url"),
-    BASE_URL:joi.string().trim().description("BASE_URL"),
+    BASE_URL: joi.string().trim().description("BASE_URL"),
 }).unknown();
 
 const { value: envVars, error } = envVarsSchema
@@ -22,5 +22,5 @@ module.exports = {
             useUnifiedTopology: true,
         },
     },
-    base_url:envVars.BASE_URL,
+    base_url: envVars.BASE_URL,
 };

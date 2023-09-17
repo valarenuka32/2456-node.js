@@ -60,14 +60,14 @@ const updateDetiles = async (req, res) => {
 const deleteRecode = async (req, res) => {
     try {
         const productId = req.params.productId;
-        const productEx=await productService.getproductById(productId);
-        if(!productEx){
-            throw new Error ("product not found");
+        const productEx = await productService.getproductById(productId);
+        if (!productEx) {
+            throw new Error("product not found");
         }
-        await productService.deleteRecode(productId,req.body);
+        await productService.deleteRecode(productId, req.body);
         res.status(200).json({
-            success:true,
-            message:"product delete successfully !"
+            success: true,
+            message: "product delete successfully !"
         })
 
     } catch (error) {

@@ -7,7 +7,7 @@ const createProduct = async (reqbody) => {
 
 const productList = async (req, res) => {
     return product.find()
-    .populate("images");
+        .populate("images");
 };
 
 const updateDetiles = async (productId, updateBody) => {
