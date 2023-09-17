@@ -6,15 +6,17 @@ const createImage = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        const image = await imageService.createImage(reqBody);
-        if (!image) {
-            throw new Error("somthing went wrong, please try again on later!")
+        if (req.file) {
+            reqBody.product_image = req.file.filename;
+        } else {
+            throw new Error("image is required");
         }
 
+        const createImage = await imageService.createImage(reqBody);
         res.status(200).json({
             success: true,
             message: "image create successfully!",
-            data: (image),
+            data: (createImage),
         })
 
     } catch (error) {

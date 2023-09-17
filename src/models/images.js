@@ -11,21 +11,21 @@ const imagesSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
-        // img: {
-        //     type: String,
-        //     trim: true,
-        // },
+        product_image: {
+            type: String,
+            trim: true,
+        },
     },
     {
         timestamps: true,
         versionKey: false,
-        // toJSON: {
-        //     transform: function (doc, data) {
-        //         if (data?.product_image) {
-        //             data.product_image = `${config.base_url}product_image/${data.product_image}`;
-        //         }
-        //     },
-        // },
+        toJSON: {
+            transform: function (doc, data) {
+                if (data?.product_image) {
+                    data.product_image = `${config.base_url}product_image/${data.product_image}`;
+                }
+            },
+        },
     }
 );
 

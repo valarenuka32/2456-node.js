@@ -1,24 +1,24 @@
-const { image } = require("../models");
+const { images } = require("../models");
 
 // images
 const createImage = async (reqbody) => {
-    return image.create(reqbody);
+    return images.create(reqbody);
 };
 
 const imageList = async (req, res) => {
-    return image.find();
+    return images.find();
 };
 
 const deleteImg = async (imageId) => {
-    return image.findByIdDelete(imageId);
+    return images.findByIdDelete(imageId);
 };
 
 const updateImg = async (imageId, updateBody) => {
-    return image.findByIdUpdate(imageId, { $set: updateBody });
+    return images.findByIdUpdate(imageId, { $set: updateBody });
 };
 
 const getImageById = async (imageId) => {
-    return image.findById(imageId);
+    return images.findById(imageId);
 }
 module.exports = {
     createImage,
