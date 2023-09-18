@@ -2,6 +2,10 @@ const express = require("express");
 const http = require("http");
 const fs = require("fs");
 const bodyParser = require("body-parser");
+const {connectDB}=require("./db/dbconection");
+
+// database connection
+connectDB()
 
 const app = express();
 
