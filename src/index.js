@@ -4,9 +4,12 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const { connectDB } = require("./db/dbconection");
 const config = require("./config/config");
+const router = require("./routes/user.route");
 
 // database connection
 connectDB()
+
+app.use("/v1",router);
 
 const app = express();
 
