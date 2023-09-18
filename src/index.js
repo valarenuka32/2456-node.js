@@ -2,7 +2,8 @@ const express = require("express");
 const http = require("http");
 const fs = require("fs");
 const bodyParser = require("body-parser");
-const {connectDB}=require("./db/dbconection");
+const { connectDB } = require("./db/dbconection");
+const config = require("./config/config");
 
 // database connection
 connectDB()
