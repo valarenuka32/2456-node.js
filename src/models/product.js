@@ -21,7 +21,11 @@ const productSchema = new mongoose.Schema(
         images: {
             type: mongoose.Types.ObjectId,
             ref: "images",
-        }
+        },
+        is_active: {
+            type: Boolean,
+            default: true,
+        },
     },
     {
         timestamps: true,
