@@ -14,14 +14,16 @@ const sportCtegorySchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        Name: {
-            type: String,
-            trim: true,
+        is_active: {
+            type: Boolean,
+            default: true,
         },
-        Name: {
-            type: String,
-            trim: true,
-        },
-
+    },
+    {
+        timestamps: true,
+        versionKey: false,
     }
-)
+);
+
+const sportCtegory = mongoose.model("sportCtegory", sportCtegorySchema);
+module.exports = sportCtegory;

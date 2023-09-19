@@ -18,6 +18,10 @@ const contectusSchema = new mongoose.Schema(
             type: Number,
             trim: true,
         },
+        is_active: {
+            type: Boolean,
+            default: true,
+        },
     },
     {
         timestamps: true,
