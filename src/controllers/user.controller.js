@@ -1,3 +1,4 @@
+const { get } = require("mongoose");
 const { userService } = require("../services");
 
 // create user
@@ -20,8 +21,20 @@ const userCreate = async (req, res) => {
 };
 
 // get list
-// const
+const userList = async (req, res) => {
+    try {
+        const getDetiles = await userService.userList();
+        res.status(200).json({
+            success: true,
+            message: "user  create successfully!",
+            data: { getDetiles }
+        })
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    };
+};
 
 module.exports = {
-    userCreate
+    userCreate,
+    userList
 }
