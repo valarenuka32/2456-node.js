@@ -20,7 +20,7 @@ const userCreate = async (req, res) => {
 };
 
 // get list
-// const 
+// const
 
 module.exports = {
     userCreate
