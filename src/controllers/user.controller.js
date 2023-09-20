@@ -34,7 +34,19 @@ const userList = async (req, res) => {
     };
 };
 
+// update
+const updateUser = async (req, res) => {
+   try {
+    const userId=req.params.userId;
+
+    const userEx=await userService
+   } catch (error) {
+    res.status(400).json({success:false,message:error.message});
+   };
+};
+
 module.exports = {
     userCreate,
-    userList
+    userList,
+    updateUser
 }

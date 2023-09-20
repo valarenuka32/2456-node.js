@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-user",
+    "/update-user/:userId",
     userController.updateUser
 );
 
 // delete
 router.delete(
-    "/delete-user",
+    "/delete-user/:userId",
     userController.deleteUser
 );
 
