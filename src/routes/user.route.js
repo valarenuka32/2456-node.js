@@ -8,26 +8,26 @@ const router = express.Router();
 // create route
 router.post(
     "/create-user",
-    validate(userController.userCreate),
-    userValidation.userCreate
+    validate(userValidation.userCreate),
+    userController.userCreate
 );
 
 // user list
 router.get(
     "/list",
-    userValidation.userList
+    userController.userList
 );
 
 // update
 router.put(
     "/update-user",
-    userValidation.updateUser
+    userController.updateUser
 );
 
 // delete
 router.delete(
     "/delete-user",
-    userValidation.deleteUser
+    userController.deleteUser
 );
 
 module.exports = router;
