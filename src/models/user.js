@@ -16,11 +16,9 @@ const userSchema = new mongoose.Schema(
         },
         phone_no: {
             type: Number,
-            trim: true,
         },
         password: {
             type: Number,
-            trim: true,
         },
         is_active: {
             type: Boolean,

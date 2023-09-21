@@ -16,7 +16,6 @@ const contectusSchema = new mongoose.Schema(
         },
         phone: {
             type: Number,
-            trim: true,
         },
         is_active: {
             type: Boolean,

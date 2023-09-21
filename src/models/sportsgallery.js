@@ -2,14 +2,6 @@ const mongoose = require("mongoose");
 
 const sportsgallerySchema = new mongoose.Schema(
     {
-        sport_name: {
-            type: String,
-            trim: true,
-        },
-        Description: {
-            type: String,
-            trim: true,
-        },
         sport_img: {
             type: String,
         },

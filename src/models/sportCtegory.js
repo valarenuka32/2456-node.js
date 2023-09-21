@@ -10,9 +10,9 @@ const sportCtegorySchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        Image: {
-            type: String,
-            trim: true,
+        sport_date: {
+            type: Date,
+            default: Date.now(),
         },
         is_active: {
             type: Boolean,
