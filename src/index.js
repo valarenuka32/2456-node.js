@@ -4,14 +4,15 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const { connectDB } = require("./db/dbconection");
 const config = require("./config/config");
-const router = require("./routes/user.route");
+const router = require("./routes");
 
 // database connection
 connectDB()
 
+const app = express();
+
 app.use("/v1",router);
 
-const app = express();
 
 const server = http.createServer(app);
 

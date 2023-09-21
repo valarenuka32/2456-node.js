@@ -8,11 +8,11 @@ const contectusSchema = new mongoose.Schema(
         },
         email: {
             type: String,
-            type: true,
+            trim: true,
         },
         address: {
             type: String,
-            type: true,
+            trim: true,
         },
         phone: {
             type: Number,
@@ -30,4 +30,5 @@ const contectusSchema = new mongoose.Schema(
 );
 
 const contect_us = mongoose.model("contect_us", contectusSchema);
+
 module.exports = contect_us;
