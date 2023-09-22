@@ -49,8 +49,8 @@ Score
       "CoachID": "coach1",
       "FirstName": "Mike",
       "LastName": "Johnson"
-      date_of_birth:
-      nationality:
+      Age:
+      Gender:
       team_id=ref
     },
     "Statistics": {
