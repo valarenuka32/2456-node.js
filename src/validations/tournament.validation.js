@@ -13,4 +13,4 @@ const createTournament = {
 
 module.exports={
     createTournament
-}
+};

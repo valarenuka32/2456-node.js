@@ -13,13 +13,13 @@ router.post(
     teamCantroller.createTeam
 );
 
-// // get team
+// get team
 router.get(
     "/list",
     teamCantroller.teamList
 );
 
- // dalete
+// dalete
 router.delete(
     "/delete-team/:teamId",
     teamCantroller.deleteRecord
