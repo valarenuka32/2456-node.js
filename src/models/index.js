@@ -1,4 +1,4 @@
-module.exports.user = require("./user");
-module.exports.contect_us = require("./contect_us");
-module.exports.sportCtegory = require("./sportCtegory");
-module.exports.sportsgallery = require("./sportsgallery");
+module.exports.user = require("./user.model");
+module.exports.contect_us = require("./contect_us.model");
+module.exports.sportCtegory = require("./sportCtegory.model");
+module.exports.sportsgallery = require("./sportsgallery.model");
