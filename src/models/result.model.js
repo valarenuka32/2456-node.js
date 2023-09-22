@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 
 const resultSchema = new mongoose.Schema(
     {
-        Winner_team: {
+        winner_team: {
             type: String,
             trim: true,
         },
-        Loser_team: {
+        loser_team: {
             type: String,
             trim: true,
         },

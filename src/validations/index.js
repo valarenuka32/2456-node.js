@@ -7,3 +7,4 @@ module.exports.teamValidation=require("./team.validation");
 module.exports.tournamentValidation=require("./tournament.validation");
 module.exports.newsValidation=require("./news.validation");
 module.exports.playerValidation=require("./player.validation");
+module.exports.resultValidation=require("./result.validation");

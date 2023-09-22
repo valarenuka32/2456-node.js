@@ -9,6 +9,7 @@ const teamRoute = require("./team.route");
 const tournamentRoute = require("./tournament.route");
 const newsRoute = require("./news.route");
 const playerRoute = require("./player.route");
+const resultRoute = require("./result.route");
 
 const router = express.Router();
 
@@ -21,5 +22,6 @@ router.use("/team", teamRoute);
 router.use("/tournament", tournamentRoute);
 router.use("/news", newsRoute);
 router.use("/player", playerRoute);
+router.use("/result", resultRoute);
 
 module.exports = router;

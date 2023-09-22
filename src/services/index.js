@@ -7,3 +7,4 @@ module.exports.teamService = require("./team.services");
 module.exports.tournamentService = require("./tournament.services");
 module.exports.newsService = require("./news.services");
 module.exports.playerService = require("./player.services");
+module.exports.resultService = require("./result.services");

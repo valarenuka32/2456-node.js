@@ -7,3 +7,4 @@ module.exports.tramCantroller = require("./team.controller");
 module.exports.tournamentCantroller = require("./tournament.controllers");
 module.exports.newsCantroller = require("./news.controller");
 module.exports.playerCantroller = require("./player.controllres");
+module.exports.resultCantroller = require("./result.controllers");
