@@ -1,36 +1,36 @@
-const { userService } = require("../services");
+const { teamService } = require("../services");
 
-/** create user */
-const createUser = async (req, res) => {
+/** create team */
+const createteam = async (req, res) => {
     try {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const userEx = await userService.getUserByName(reqBody.first_name);
-        // if (userEx) {
-        //     throw new Error(`please add other user this ${userEx.first_name} user already created`);
+        // const teamEx = await teamService.getteamByName(reqBody.first_name);
+        // if (teamEx) {
+        //     throw new Error(`please add other team this ${teamEx.first_name} team already created`);
         // }
 
-        const user = await userService.createUser(reqBody);
+        const team = await teamService.createteam(reqBody);
 
         res.status(200).json({
             success: true,
-            message: "user detiles create successfully!",
-            data: { user },
+            message: "team detiles create successfully!",
+            data: { team },
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
     }
 };
 
-// get user list
-const userList = async (req, res) => {
+// get team list
+const teamList = async (req, res) => {
     try {
-        const getList = await userService.userList();
+        const getList = await teamService.teamList();
 
         res.status(200).json({
             success: true,
-            message: "Get user list successfully!",
+            message: "Get team list successfully!",
             data: getList
         });
     } catch (error) {
@@ -41,17 +41,17 @@ const userList = async (req, res) => {
 // // delete list
 const deleteRecord = async (req, res) => {
     try {
-        const userId = req.params.userId;
-        const userEx = await userService.getUserById(userId);
-        if (!userEx) {
-            throw new Error("user detiles not found!");
+        const teamId = req.params.teamId;
+        const teamEx = await teamService.getteamById(teamId);
+        if (!teamEx) {
+            throw new Error("team detiles not found!");
         }
 
-        await userService.deleteRecord(userId);
+        await teamService.deleteRecord(teamId);
 
         res.status(200).json({
             success: true,
-            message: "user detiles delete successfully!",
+            message: "team detiles delete successfully!",
         });
     } catch (error) {
         res.status(400).json({
@@ -64,18 +64,18 @@ const deleteRecord = async (req, res) => {
 // // update detiles
 const updateDetiles = async (req, res) => {
     try {
-        const userId = req.params.userId;
+        const teamId = req.params.teamId;
 
-        const userEx = await userService.getUserById(userId);
-        if (!userEx) {
-            throw new Error("user not found!");
+        const teamEx = await teamService.getteamById(teamId);
+        if (!teamEx) {
+            throw new Error("team not found!");
         }
 
-        await userService.updateDetiles(userId, req.body);
+        await teamService.updateDetiles(teamId, req.body);
 
         res.status(200).json({
             success: true,
-            message: "user details update successfully!",
+            message: "team details update successfully!",
         });
     } catch (error) {
         res.status(400).json({
@@ -85,8 +85,8 @@ const updateDetiles = async (req, res) => {
     }
 };
 module.exports = {
-    createUser,
-    userList,
+    createteam,
+    teamList,
     deleteRecord,
     updateDetiles
 };
