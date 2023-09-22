@@ -2,18 +2,15 @@ const mongoose = require("mongoose");
 
 const resultSchema = new mongoose.Schema(
     {
-        Winner: {
+        Winner_team: {
             type: String,
             trim: true,
         },
-        Loser: {
+        Loser_team: {
             type: String,
             trim: true,
         },
-        Score: {
-            type: Number,
-        },
-        password: {
+        team_score: {
             type: Number,
         },
         is_active: {
