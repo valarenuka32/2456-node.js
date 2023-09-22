@@ -1,7 +1,7 @@
 const { tournamentService } = require("../services");
 
 /** create tournament */
-const createtournament = async (req, res) => {
+const createTournament = async (req, res) => {
     try {
         const reqBody = req.body;
         console.log(reqBody);
@@ -11,7 +11,7 @@ const createtournament = async (req, res) => {
         //     throw new Error(`please add other tournament this ${tournamentEx.first_name} tournament already created`);
         // }
 
-        const tournament = await tournamentService.createtournament(reqBody);
+        const tournament = await tournamentService.createTournament(reqBody);
 
         res.status(200).json({
             success: true,
@@ -85,7 +85,7 @@ const updateDetiles = async (req, res) => {
     }
 };
 module.exports = {
-    createtournament,
+    createTournament,
     tournamentList,
     deleteRecord,
     updateDetiles

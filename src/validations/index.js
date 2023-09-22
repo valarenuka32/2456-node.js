@@ -4,3 +4,4 @@ module.exports.sport_categoryValidation=require("./sport_category.validation");
 module.exports.sportgalleryValidation=require("./sportgallery.validation");
 module.exports.founderValidation=require("./founder.validation");
 module.exports.teamValidation=require("./team.validation");
+module.exports.tournamentValidation=require("./tournament.validation");
