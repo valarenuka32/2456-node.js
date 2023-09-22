@@ -25,9 +25,9 @@ const updateDetiles = async (sportgalleryId, updateBody) => {
     return sportgallery.findByIdAndUpdate(sportgalleryId, { $set: updateBody });
 };
 
-const getsportgalleryByName = async (first_name) => {
-    return sportgallery.findOne({ first_name });
-}
+// const getsportgalleryByName = async (first_name) => {
+//     return sportgallery.findOne({ first_name });
+// }
 
 
 module.exports = {
@@ -36,5 +36,5 @@ module.exports = {
     deleteRecord,
     getsportgalleryById,
     updateDetiles,
-    getsportgalleryByName
+    // getsportgalleryByName
 };

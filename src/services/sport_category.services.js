@@ -25,9 +25,9 @@ const updateDetiles = async (sport_categoryId, updateBody) => {
     return sport_category.findByIdAndUpdate(sport_categoryId, { $set: updateBody });
 };
 
-const getsport_categoryByName = async (first_name) => {
-    return sport_category.findOne({ first_name });
-}
+// const getsport_categoryByName = async (first_name) => {
+//     return sport_category.findOne({ first_name });
+// }
 
 
 module.exports = {
@@ -36,5 +36,5 @@ module.exports = {
     deleteRecord,
     getsport_categoryById,
     updateDetiles,
-    getsport_categoryByName
+    // getsport_categoryByName
 };

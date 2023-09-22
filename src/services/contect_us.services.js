@@ -25,9 +25,9 @@ const updateDetiles = async (contect_usId, updateBody) => {
     return contect_us.findByIdAndUpdate(contect_usId, { $set: updateBody });
 };
 
-const getcontect_usByName = async (first_name) => {
-    return contect_us.findOne({ first_name });
-}
+// const getcontect_usByName = async (first_name) => {
+//     return contect_us.findOne({ first_name });
+// }
 
 
 module.exports = {
@@ -36,5 +36,5 @@ module.exports = {
     deleteRecord,
     getcontect_usById,
     updateDetiles,
-    getcontect_usByName
+    // getcontect_usByName
 };

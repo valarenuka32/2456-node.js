@@ -25,9 +25,9 @@ const updateDetiles = async (founderId, updateBody) => {
     return founder.findByIdAndUpdate(founderId, { $set: updateBody });
 };
 
-const getfounderByName = async (first_name) => {
-    return founder.findOne({ first_name });
-};
+// const getfounderByName = async (first_name) => {
+//     return founder.findOne({ first_name });
+// };
 
 module.exports = {
     createFounder,
@@ -35,5 +35,5 @@ module.exports = {
     deleteRecord,
     getfounderById,
     updateDetiles,
-    getfounderByName
+    // getfounderByName
 };
