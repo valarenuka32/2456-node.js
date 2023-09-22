@@ -5,6 +5,7 @@ const contect_usRoute = require("./contect_us.route");
 const sport_categoryRoute = require("./sport_category.route");
 const sportgalleryRoute = require("./sport_category.route");
 const founderRoute = require("./founder.route");
+const teamRoute = require("./team.route");
 
 const router = express.Router();
 
@@ -13,5 +14,6 @@ router.use("/contect_us", contect_usRoute);
 router.use("/sport_category", sport_categoryRoute);
 router.use("/sportgallery", sportgalleryRoute);
 router.use("/founder", founderRoute);
+router.use("/team", teamRoute);
 
 module.exports = router;
