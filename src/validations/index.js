@@ -6,3 +6,4 @@ module.exports.founderValidation=require("./founder.validation");
 module.exports.teamValidation=require("./team.validation");
 module.exports.tournamentValidation=require("./tournament.validation");
 module.exports.newsValidation=require("./news.validation");
+module.exports.playerValidation=require("./player.validation");
