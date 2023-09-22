@@ -1,0 +1,22 @@
+Tournament:
+
+Tournament Name
+Start Date
+End Date
+Location
+Organizer
+Description
+
+News Article:
+Title
+Publication Date
+Content
+Category/ref
+Views/Read Count
+Comments
+
+Result:
+Winner
+Loser
+Tie/Draw Indicator
+Score
