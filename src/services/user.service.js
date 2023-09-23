@@ -25,10 +25,9 @@ const updateDetiles = async (userId, updateBody) => {
     return user.findByIdAndUpdate(userId, { $set: updateBody });
 };
 
-const getuserByName = async (first_name) => {
-    return user.findOne({ first_name });
-}
-
+const getUserByEmail=async(email)=>{
+    return user.findOne({email});
+ };
 
 module.exports = {
     createUser,
@@ -36,5 +35,5 @@ module.exports = {
     deleteRecord,
     getuserById,
     updateDetiles,
-    getuserByName
+    getUserByEmail
 };
