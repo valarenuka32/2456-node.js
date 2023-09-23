@@ -10,7 +10,8 @@ const createResult = async (reqBody) => {
 };
 
 const resultList = async (req, res) => {
-    return result.find();
+    return result.find()
+    .populate("news");
 };
 
 const deleteRecord = async (resultId) => {
@@ -25,16 +26,10 @@ const updateDetiles = async (resultId, updateBody) => {
     return result.findByIdAndUpdate(resultId, { $set: updateBody });
 };
 
-const getresultByName = async (first_name) => {
-    return result.findOne({ first_name });
-}
-
-
 module.exports = {
     createResult,
     resultList,
     deleteRecord,
     getresultById,
     updateDetiles,
-    getresultByName
 };

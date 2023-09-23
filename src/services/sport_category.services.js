@@ -1,40 +1,35 @@
-const { sport_category } = require("../models");
+const { sportCtegory } = require("../models");
 
 /**
- * Create sport_category
+ * Create sportCtegory
  * @param {object} reqBody
- * @returns {Promise<sport_category>}
+ * @returns {Promise<sportCtegory>}
  */
-const createSport_category = async (reqBody) => {
-    return sport_category.create(reqBody);
+const createsportCtegory = async (reqBody) => {
+    return sportCtegory.create(reqBody);
 };
 
-const sport_categoryList = async (req, res) => {
-    return sport_category.find();
+const sportCtegoryList = async (req, res) => {
+    return sportCtegory.find()
+    .populate("sportsgallery");
 };
 
-const deleteRecord = async (sport_categoryId) => {
-    return sport_category.findByIdAndDelete(sport_categoryId);
+const deleteRecord = async (sportCtegoryId) => {
+    return sportCtegory.findByIdAndDelete(sportCtegoryId);
 };
 
-const getsport_categoryById = async (sport_categoryId) => {
-    return sport_category.findById(sport_categoryId);
+const getsportCtegoryById = async (sportCtegoryId) => {
+    return sportCtegory.findById(sportCtegoryId);
 };
 
-const updateDetiles = async (sport_categoryId, updateBody) => {
-    return sport_category.findByIdAndUpdate(sport_categoryId, { $set: updateBody });
+const updateDetiles = async (sportCtegoryId, updateBody) => {
+    return sportCtegory.findByIdAndUpdate(sportCtegoryId, { $set: updateBody });
 };
-
-// const getsport_categoryByName = async (first_name) => {
-//     return sport_category.findOne({ first_name });
-// }
-
 
 module.exports = {
-    createSport_category,
-    sport_categoryList,
+    createsportCtegory,
+    sportCtegoryList,
     deleteRecord,
-    getsport_categoryById,
+    getsportCtegoryById,
     updateDetiles,
-    // getsport_categoryByName
 };

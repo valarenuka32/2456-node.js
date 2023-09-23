@@ -6,11 +6,6 @@ const createTeam = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const teamEx = await teamService.getteamByName(reqBody.first_name);
-        // if (teamEx) {
-        //     throw new Error(`please add other team this ${teamEx.first_name} team already created`);
-        // }
-
         const team = await teamService.createTeam(reqBody);
 
         res.status(200).json({

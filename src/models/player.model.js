@@ -22,6 +22,10 @@ const playerSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        team: {
+            type: mongoose.Types.ObjectId,
+            ref: "team",
+        },
         is_active: {
             type: Boolean,
             default: true,

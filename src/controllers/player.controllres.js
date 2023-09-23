@@ -6,11 +6,6 @@ const createPlayer = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const playerEx = await playerService.getplayerByName(reqBody.first_name);
-        // if (playerEx) {
-        //     throw new Error(`please add other player this ${playerEx.first_name} player already created`);
-        // }
-
         const player = await playerService.createPlayer(reqBody);
 
         res.status(200).json({

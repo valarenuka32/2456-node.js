@@ -6,11 +6,6 @@ const createResult = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const resultEx = await resultService.getresultByName(reqBody.first_name);
-        // if (resultEx) {
-        //     throw new Error(`please add other result this ${resultEx.first_name} result already created`);
-        // }
-
         const result = await resultService.createResult(reqBody);
 
         res.status(200).json({

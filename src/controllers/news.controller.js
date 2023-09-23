@@ -6,11 +6,6 @@ const createNews = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const newsEx = await newsService.getnewsByName(reqBody.first_name);
-        // if (newsEx) {
-        //     throw new Error(`please add other news this ${newsEx.first_name} news already created`);
-        // }
-
         const news = await newsService.createNews(reqBody);
 
         res.status(200).json({

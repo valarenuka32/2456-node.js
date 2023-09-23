@@ -13,6 +13,10 @@ const resultSchema = new mongoose.Schema(
         team_score: {
             type: Number,
         },
+        news: {
+            type: mongoose.Types.ObjectId,
+            ref: "news",
+        },
         is_active: {
             type: Boolean,
             default: true,

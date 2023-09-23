@@ -14,6 +14,10 @@ const sportCtegorySchema = new mongoose.Schema(
             type: Date,
             default: Date.now(),
         },
+        sportsgallery: {
+            type: mongoose.Types.ObjectId,
+            ref: "sportsgallery",
+        },
         is_active: {
             type: Boolean,
             default: true,

@@ -25,16 +25,10 @@ const updateDetiles = async (newsId, updateBody) => {
     return news.findByIdAndUpdate(newsId, { $set: updateBody });
 };
 
-const getnewsByName = async (first_name) => {
-    return news.findOne({ first_name });
-}
-
-
 module.exports = {
     createNews,
     newsList,
     deleteRecord,
     getnewsById,
     updateDetiles,
-    getnewsByName
 };

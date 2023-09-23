@@ -6,11 +6,6 @@ const createContect_us = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const contect_usEx = await contect_usService.getcontect_usByName(reqBody.first_name);
-        // if (contect_usEx) {
-        //     throw new Error(`please add other contect_us this ${contect_usEx.first_name} contect_us already created`);
-        // }
-
         const contect_us=await contect_usService.createContect_us(reqBody);
 
         res.status(200).json({

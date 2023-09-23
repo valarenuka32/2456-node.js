@@ -20,6 +20,10 @@ const coachSchema = new mongoose.Schema(
         coaching_experience: {
             type: Number,
         },
+        team: {
+            type: mongoose.Types.ObjectId,
+            ref: "team",
+        },
         is_active: {
             type: Boolean,
             default: true,

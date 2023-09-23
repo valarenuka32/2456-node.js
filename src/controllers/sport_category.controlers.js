@@ -6,11 +6,6 @@ const createSport_category = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const sport_categoryEx = await sport_categoryService.getsport_categoryByName(reqBody.first_name);
-        // if (sport_categoryEx) {
-        //     throw new Error(`please add other sport_category this ${sport_categoryEx.first_name} sport_category already created`);
-        // }
-
         const sport_category=await sport_categoryService.createSport_category(reqBody);
 
         res.status(200).json({

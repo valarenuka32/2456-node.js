@@ -26,6 +26,10 @@ const tournamentSchema = new mongoose.Schema(
         location: {
             type: String,
         },
+        team: {
+            type: mongoose.Types.ObjectId,
+            ref: "team",
+        },
         is_active: {
             type: Boolean,
             default: true,

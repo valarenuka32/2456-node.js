@@ -5,12 +5,13 @@ const { tournament } = require("../models");
  * @param {object} reqBody
  * @returns {Promise<tournament>}
  */
-const createtournament = async (reqBody) => {
+const createTournament = async (reqBody) => {
     return tournament.create(reqBody);
 };
 
 const tournamentList = async (req, res) => {
-    return tournament.find();
+    return tournament.find()
+    .populate("team");
 };
 
 const deleteRecord = async (tournamentId) => {
@@ -25,13 +26,8 @@ const updateDetiles = async (tournamentId, updateBody) => {
     return tournament.findByIdAndUpdate(tournamentId, { $set: updateBody });
 };
 
-const gettournamentByName = async (first_name) => {
-    return tournament.findOne({ first_name });
-}
-
-
 module.exports = {
-    createtournament,
+    createTournament,
     tournamentList,
     deleteRecord,
     gettournamentById,

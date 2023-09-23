@@ -6,11 +6,6 @@ const createFounder = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const founderEx = await founderService.getfounderByName(reqBody.first_name);
-        // if (founderEx) {
-        //     throw new Error(`please add other founder this ${founderEx.first_name} founder already created`);
-        // }
-
         const founder=await founderService.createFounder(reqBody);
 
         res.status(200).json({

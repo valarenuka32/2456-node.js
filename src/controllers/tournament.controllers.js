@@ -6,11 +6,6 @@ const createTournament = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const tournamentEx = await tournamentService.gettournamentByName(reqBody.first_name);
-        // if (tournamentEx) {
-        //     throw new Error(`please add other tournament this ${tournamentEx.first_name} tournament already created`);
-        // }
-
         const tournament = await tournamentService.createTournament(reqBody);
 
         res.status(200).json({

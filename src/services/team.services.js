@@ -10,7 +10,9 @@ const createTeam = async (reqBody) => {
 };
 
 const teamList = async (req, res) => {
-    return team.find();
+    return team.find()
+    .populate("player")
+    .populate("coach");
 };
 
 const deleteRecord = async (teamId) => {
@@ -25,16 +27,10 @@ const updateDetiles = async (teamId, updateBody) => {
     return team.findByIdAndUpdate(teamId, { $set: updateBody });
 };
 
-// const getteamByName = async (first_name) => {
-//     return team.findOne({ first_name });
-// }
-
-
 module.exports = {
     createTeam,
     teamList,
     deleteRecord,
     getteamById,
     updateDetiles,
-    // getteamByName
 };

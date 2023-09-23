@@ -6,11 +6,6 @@ const createCoach = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const coachEx = await coachService.getcoachByName(reqBody.first_name);
-        // if (coachEx) {
-        //     throw new Error(`please add other coach this ${coachEx.first_name} coach already created`);
-        // }
-
         const coach = await coachService.createCoach(reqBody);
 
         res.status(200).json({

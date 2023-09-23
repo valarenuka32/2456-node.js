@@ -6,10 +6,10 @@ const createUser = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const userEx = await userService.getUserByName(reqBody.first_name);
-        // if (userEx) {
-        //     throw new Error(`please add other user this ${userEx.first_name} user already created`);
-        // }
+        const userEx = await userService.getUserByName(reqBody.first_name);
+        if (userEx) {
+            throw new Error(`please add other user this ${userEx.first_name} user already created`);
+        }
 
         const user = await userService.createUser(reqBody);
 
