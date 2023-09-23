@@ -11,7 +11,8 @@ const createPlayer = async (reqBody) => {
 
 const playerList = async (req, res) => {
     return player.find()
-    .populate("team");
+    .populate("team")
+    .count();
 };
 
 const deleteRecord = async (playerId) => {
