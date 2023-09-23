@@ -1,40 +1,40 @@
-const { sportgallery } = require("../models");
+const { sportsgallery } = require("../models");
 
 /**
- * Create sportgallery
+ * Create sportsgallery
  * @param {object} reqBody
- * @returns {Promise<sportgallery>}
+ * @returns {Promise<sportsgallery>}
  */
-const createsportGallery = async (reqBody) => {
-    return sportgallery.create(reqBody);
+const createsportsgallery = async (reqBody) => {
+    return sportsgallery.create(reqBody);
 };
 
-const sportGalleryList = async (req, res) => {
-    return sportgallery.find();
+const sportsgalleryList = async (req, res) => {
+    return sportsgallery.find();
 };
 
-const deleteRecord = async (sportgalleryId) => {
-    return sportgallery.findByIdAndDelete(sportgalleryId);
+const deleteRecord = async (sportsgalleryId) => {
+    return sportsgallery.findByIdAndDelete(sportsgalleryId);
 };
 
-const getsportgalleryById = async (sportgalleryId) => {
-    return sportgallery.findById(sportgalleryId);
+const getsportsgalleryById = async (sportsgalleryId) => {
+    return sportsgallery.findById(sportsgalleryId);
 };
 
-const updateDetiles = async (sportgalleryId, updateBody) => {
-    return sportgallery.findByIdAndUpdate(sportgalleryId, { $set: updateBody });
+const updateDetiles = async (sportsgalleryId, updateBody) => {
+    return sportsgallery.findByIdAndUpdate(sportsgalleryId, { $set: updateBody });
 };
 
-// const getsportgalleryByName = async (first_name) => {
-//     return sportgallery.findOne({ first_name });
+// const getsportsgalleryByName = async (first_name) => {
+//     return sportsgallery.findOne({ first_name });
 // }
 
 
 module.exports = {
-    createsportGallery,
-    sportGalleryList,
+    createsportsgallery,
+    sportsgalleryList,
     deleteRecord,
-    getsportgalleryById,
+    getsportsgalleryById,
     updateDetiles,
-    // getsportgalleryByName
+    // getsportsgalleryByName
 };
