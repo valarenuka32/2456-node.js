@@ -19,7 +19,7 @@ const sendMail = {
     }),
 };
 
-module.exports={
+module.exports = {
     createUser,
     sendMail
-}
+};
