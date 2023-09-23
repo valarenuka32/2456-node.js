@@ -1,7 +1,7 @@
 const { teamService } = require("../services");
 
 /** create team */
-const createteam = async (req, res) => {
+const createTeam = async (req, res) => {
     try {
         const reqBody = req.body;
         console.log(reqBody);
@@ -11,7 +11,7 @@ const createteam = async (req, res) => {
         //     throw new Error(`please add other team this ${teamEx.first_name} team already created`);
         // }
 
-        const team = await teamService.createteam(reqBody);
+        const team = await teamService.createTeam(reqBody);
 
         res.status(200).json({
             success: true,
@@ -85,7 +85,7 @@ const updateDetiles = async (req, res) => {
     }
 };
 module.exports = {
-    createteam,
+    createTeam,
     teamList,
     deleteRecord,
     updateDetiles

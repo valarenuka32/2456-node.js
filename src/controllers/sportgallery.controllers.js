@@ -6,12 +6,13 @@ const createsportGallery = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        // const sportgalleryEx = await sportgalleryService.getsportgalleryByName(reqBody.first_name);
-        // if (sportgalleryEx) {
-        //     throw new Error(`please add other sportgallery this ${sportgalleryEx.first_name} sportgallery already created`);
-        // }
+        if (req.file) {
+            reqBody.sport_img = req.file.filename;
+        } else {
+            throw new Error("image is required");
+        }
 
-        const sportgallery=await sportgalleryService.createsportGallery(reqBody);
+        const sportgallery = await sportgalleryService.createsportGallery(reqBody);
 
         res.status(200).json({
             success: true,

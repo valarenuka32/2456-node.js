@@ -1,4 +1,5 @@
 const express = require("express");
+const { upload } = require("../middlewares/upload");
 const { sportgalleryValidation } = require("../validations");
 const { sportgalleryCantroller } = require("../controllers");
 const validate = require("../middlewares/validate");
@@ -9,6 +10,7 @@ const router = express.Router();
 // create sportgallery
 router.post(
     "/create-sportgallery",
+    upload.single("sport_img"),
     validate(sportgalleryValidation.createsportGallery),
     sportgalleryCantroller.createsportGallery
 );
@@ -19,7 +21,7 @@ router.get(
     sportgalleryCantroller.sportGalleryList
 );
 
- // dalete
+// dalete
 router.delete(
     "/delete-sportgallery/:sportgalleryId",
     sportgalleryCantroller.deleteRecord

@@ -4,7 +4,7 @@ const Joi = require("joi");
 
 const createsportGallery = {
     body: Joi.object().keys({
-        sport_img: Joi.string().required().trim(),
+        sport_img: Joi.string().allow(""),
     }),
 };
 

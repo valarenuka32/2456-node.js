@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 
+app.use(express.static(`./public`));
+
 app.use("/v1", routes);
 
 const server = http.createServer(app);

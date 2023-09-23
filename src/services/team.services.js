@@ -5,7 +5,7 @@ const { team } = require("../models");
  * @param {object} reqBody
  * @returns {Promise<team>}
  */
-const createteam = async (reqBody) => {
+const createTeam = async (reqBody) => {
     return team.create(reqBody);
 };
 
@@ -31,7 +31,7 @@ const updateDetiles = async (teamId, updateBody) => {
 
 
 module.exports = {
-    createteam,
+    createTeam,
     teamList,
     deleteRecord,
     getteamById,

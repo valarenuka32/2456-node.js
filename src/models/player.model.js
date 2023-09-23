@@ -22,9 +22,6 @@ const playerSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        team: {
-          ref
-        },
         is_active: {
             type: Boolean,
             default: true,
