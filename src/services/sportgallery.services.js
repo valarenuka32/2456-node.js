@@ -5,7 +5,7 @@ const { sportsgallery } = require("../models");
  * @param {object} reqBody
  * @returns {Promise<sportsgallery>}
  */
-const createsportsgallery = async (reqBody) => {
+const createsportGallery = async (reqBody) => {
     return sportsgallery.create(reqBody);
 };
 
@@ -25,16 +25,10 @@ const updateDetiles = async (sportsgalleryId, updateBody) => {
     return sportsgallery.findByIdAndUpdate(sportsgalleryId, { $set: updateBody });
 };
 
-// const getsportsgalleryByName = async (first_name) => {
-//     return sportsgallery.findOne({ first_name });
-// }
-
-
 module.exports = {
-    createsportsgallery,
+    createsportGallery,
     sportsgalleryList,
     deleteRecord,
     getsportsgalleryById,
     updateDetiles,
-    // getsportsgalleryByName
 };
