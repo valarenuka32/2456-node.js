@@ -13,7 +13,7 @@ router.post(
     contect_usCantroller.createContect_us
 );
 
-// // get contect_us
+// get contect_us
 router.get(
     "/list",
     contect_usCantroller.contect_usList
