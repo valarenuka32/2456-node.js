@@ -15,7 +15,7 @@ router.post(
     sportgalleryCantroller.createsportGallery
 );
 
-// // get sportgallery
+//get sportgallery
 router.get(
     "/list",
     sportgalleryCantroller.sportGalleryList

@@ -13,7 +13,7 @@ router.post(
     sport_categoryCantroller.createSportCategory
 );
 
-// // get sport_category
+//get sport_category
 router.get(
     "/list",
     sport_categoryCantroller.sportCtegoryList

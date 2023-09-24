@@ -13,7 +13,7 @@ router.post(
     newsCantroller.createNews
 );
 
-// // get news
+// get news
 router.get(
     "/list",
     newsCantroller.newsList

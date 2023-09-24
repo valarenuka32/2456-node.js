@@ -13,7 +13,7 @@ router.post(
     resultCantroller.createResult
 );
 
-// // get result
+//get result
 router.get(
     "/list",
     resultCantroller.resultList

@@ -13,7 +13,7 @@ router.post(
     tournamentCantroller.createTournament
 );
 
-// // get tournament
+// get tournament
 router.get(
     "/list",
     tournamentCantroller.tournamentList

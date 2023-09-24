@@ -13,7 +13,7 @@ router.post(
     playerCantroller.createPlayer
 );
 
-// // get player
+// get player
 router.get(
     "/list",
     playerCantroller.playerList
