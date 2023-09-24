@@ -13,7 +13,7 @@ router.post(
     founderCantroller.createFounder
 );
 
-// // get founder
+// get founder
 router.get(
     "/list",
     founderCantroller.founderList
