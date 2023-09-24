@@ -8,6 +8,9 @@ const envVarsSchema = joi.object({
     PORT: joi.number().default(7000),
     MONGODB_URL: joi.string().trim().description("mongoodb url"),
     BASE_URL: Joi.string().trim().description("BASE_URL"),
+    JWT_SECRET_KEY: Joi.string()
+        .description("Jwt sectreat key")
+        .default("this is jwtsecreat_key"),
     SMTP_HOST: joi.string().description("server that will send the emails"),
     SMTP_PORT: Joi.number().description("port to connect to the email server"),
     SMTP_USERNAME: Joi.string().description("username for email server"),
@@ -35,6 +38,9 @@ module.exports = {
         },
     },
     base_url: envVars.BASE_URL,
+    jwt: {
+        secret_key: envVars.JWT_SECRET_KEY,
+    },
     email: {
         smtp: {
             host: envVars.SMTP_HOST,

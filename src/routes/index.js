@@ -11,6 +11,7 @@ const newsRoute = require("./news.route");
 const playerRoute = require("./player.route");
 const resultRoute = require("./result.route");
 const coachRoute = require("./coach.route");
+const tokenRoute = require("./token.route");
 
 const router = express.Router();
 
@@ -25,5 +26,6 @@ router.use("/news", newsRoute);
 router.use("/player", playerRoute);
 router.use("/result", resultRoute);
 router.use("/coach", coachRoute);
+router.use("/token", tokenRoute);
 
 module.exports = router;

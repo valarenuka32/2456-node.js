@@ -9,3 +9,4 @@ module.exports.tournament = require("./tournament.model");
 module.exports.player = require("./player.model");
 module.exports.team = require("./team.model");
 module.exports.coach = require("./coach.model");
+module.exports.token = require("./token.model");
