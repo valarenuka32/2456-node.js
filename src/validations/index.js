@@ -9,3 +9,4 @@ module.exports.newsValidation = require("./news.validation");
 module.exports.playerValidation = require("./player.validation");
 module.exports.resultValidation = require("./result.validation");
 module.exports.coachValidation = require("./coach.validation");
+module.exports.generateToken = require("./token.validation");

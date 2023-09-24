@@ -11,7 +11,7 @@ const createTournament = async (reqBody) => {
 
 const tournamentList = async (req, res) => {
     return tournament.find()
-    .populate("team");
+        .populate("team");
 };
 
 const deleteRecord = async (tournamentId) => {
@@ -32,5 +32,4 @@ module.exports = {
     deleteRecord,
     gettournamentById,
     updateDetiles,
-    gettournamentByName
 };
