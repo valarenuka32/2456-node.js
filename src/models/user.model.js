@@ -35,7 +35,7 @@ userSchema.pre("save", async function (next) {
     const user = this;
 
     if (user.isModified("password")) {
-        user.Password = bcrypt.hash(user.Password, 8);
+        user.password = bcrypt.hash(user.password, 8);
     }
     next();
 });

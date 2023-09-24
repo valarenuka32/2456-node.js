@@ -13,7 +13,7 @@ router.post(
     userCantroller.createUser
 );
 
-// // get user
+// get user
 router.get(
     "/list",
     userCantroller.userList

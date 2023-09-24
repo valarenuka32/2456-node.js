@@ -6,10 +6,10 @@ const createUser = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        const userEx = await userService.getUserByEmail(reqBody.email);
-        if (userEx) {
-            throw new Error("User already created by this email!");
-        }
+        // const userEx = await userService.getUserByEmail(reqBody.email);
+        // if (userEx) {
+        //     throw new Error("User already created by this email!");
+        // }
 
         const user = await userService.createUser(reqBody);
 
