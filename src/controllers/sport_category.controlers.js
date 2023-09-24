@@ -1,12 +1,12 @@
 const { sport_categoryService } = require("../services");
 
 /** create sport_category */
-const createSport_category = async (req, res) => {
+const createSportCategory = async (req, res) => {
     try {
         const reqBody = req.body;
         console.log(reqBody);
 
-        const sport_category=await sport_categoryService.createSport_category(reqBody);
+        const sport_category=await sport_categoryService.createSportCategory(reqBody);
 
         res.status(200).json({
             success: true,
@@ -19,9 +19,9 @@ const createSport_category = async (req, res) => {
 };
 
 // get sport_category list
-const sport_categoryList = async (req, res) => {
+const sportCtegoryList = async (req, res) => {
     try {
-        const getList = await sport_categoryService.sport_categoryList();
+        const getList = await sport_categoryService.sportCtegoryList();
 
         res.status(200).json({
             success: true,
@@ -37,7 +37,7 @@ const sport_categoryList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const sport_categoryId = req.params.sport_categoryId;
-        const sport_categoryEx = await sport_categoryService.getsport_categoryById(sport_categoryId);
+        const sport_categoryEx = await sport_categoryService.getsportCtegoryById(sport_categoryId);
         if (!sport_categoryEx) {
             throw new Error("sport_category detiles not found!");
         }
@@ -61,7 +61,7 @@ const updateDetiles = async (req, res) => {
     try {
         const sport_categoryId = req.params.sport_categoryId;
 
-        const sport_categoryEx = await sport_categoryService.getsport_categoryById(sport_categoryId);
+        const sport_categoryEx = await sport_categoryService.getsportCtegoryById(sport_categoryId);
         if (!sport_categoryEx) {
             throw new Error("sport_category not found!");
         }
@@ -80,8 +80,8 @@ const updateDetiles = async (req, res) => {
     }
 };
 module.exports = {
-    createSport_category,
-    sport_categoryList,
+    createSportCategory,
+    sportCtegoryList,
     deleteRecord,
     updateDetiles
 };

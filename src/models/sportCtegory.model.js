@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 
 const sportCtegorySchema = new mongoose.Schema(
     {
-        Name: {
+        name: {
             type: String,
             trim: true,
         },
-        Description: {
+        description: {
             type: String,
             trim: true,
         },

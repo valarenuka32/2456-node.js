@@ -9,14 +9,14 @@ const router = express.Router();
 // create sportgallery
 router.post(
     "/create-sport_category",
-    validate(sport_categoryValidation.createSport_category),
-    sport_categoryCantroller.createSport_category
+    validate(sport_categoryValidation.createSportCategory),
+    sport_categoryCantroller.createSportCategory
 );
 
 // // get sport_category
 router.get(
     "/list",
-    sport_categoryCantroller.sport_categoryList
+    sport_categoryCantroller.sportCtegoryList
 );
 
  // dalete

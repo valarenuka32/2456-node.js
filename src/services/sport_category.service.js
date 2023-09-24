@@ -5,7 +5,7 @@ const { sportCtegory } = require("../models");
  * @param {object} reqBody
  * @returns {Promise<sportCtegory>}
  */
-const createsportCtegory = async (reqBody) => {
+const createSportCategory = async (reqBody) => {
     return sportCtegory.create(reqBody);
 };
 
@@ -27,7 +27,7 @@ const updateDetiles = async (sportCtegoryId, updateBody) => {
 };
 
 module.exports = {
-    createsportCtegory,
+    createSportCategory,
     sportCtegoryList,
     deleteRecord,
     getsportCtegoryById,
