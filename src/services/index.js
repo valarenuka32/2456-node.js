@@ -9,3 +9,4 @@ module.exports.newsService = require("./news.service");
 module.exports.playerService = require("./player.service");
 module.exports.resultService = require("./result.service");
 module.exports.tokenService = require("./token.service");
+module.exports.coachService = require("./coach.service");

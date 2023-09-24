@@ -13,7 +13,7 @@ router.post(
     coachCantroller.createCoach
 );
 
-// // get coach
+// get coach
 router.get(
     "/list",
     coachCantroller.coachList
