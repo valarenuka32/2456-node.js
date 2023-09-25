@@ -3,7 +3,8 @@ const fs = require("fs");
 const http = require("http");
 const bodyParser = require("body-parser");
 const { connectDB } = require("./db/dbconections");
-
+const config = require("./config/config");
+const routes = require("./routes");
 // database connection
 connectDB()
 
