@@ -18,12 +18,12 @@ router.get(
 );
 // update
 router.put(
-    "/update-user",
+    "/update-user:userId",
     userController.updateRecode
 );
 // update
 router.delete(
-    "/delete-user",
+    "/delete-user:userId",
     userController.deleteRecode
 );
 
