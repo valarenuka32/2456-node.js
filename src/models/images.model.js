@@ -1,12 +1,16 @@
 const mongoose = require("mongoose");
 
-const blogSchema = new mongoose.Schema(
+const imagesSchema = new mongoose.Schema(
     {
-        blog_name: {
+        images_name: {
             type: String,
             trim: true,
         },
-        blog_description: {
+        images_description: {
+            type: String,
+            trim: true,
+        },
+        images: {
             type: String,
             trim: true,
         },
@@ -21,5 +25,5 @@ const blogSchema = new mongoose.Schema(
     }
 );
 
-const blog = mongoose.model("blog", blogSchema);
-module.exports = blog;
+const images = mongoose.model("images", imagesSchema);
+module.exports = images;

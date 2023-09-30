@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
-const blogSchema = new mongoose.Schema(
+const categorySchema = new mongoose.Schema(
     {
-        blog_name: {
+        category_name: {
             type: String,
             trim: true,
         },
-        blog_description: {
+        category_description: {
             type: String,
             trim: true,
         },
@@ -21,5 +21,5 @@ const blogSchema = new mongoose.Schema(
     }
 );
 
-const blog = mongoose.model("blog", blogSchema);
-module.exports = blog;
+const category = mongoose.model("category", categorySchema);
+module.exports = category;
