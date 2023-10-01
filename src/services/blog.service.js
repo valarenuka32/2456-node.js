@@ -1,6 +1,6 @@
 const { blog } = require("../models");
 
-const createrBlog = async (reqBody) => {
+const createBlog = async (reqBody) => {
     return blog.create(reqBody);
 };
 
@@ -20,7 +20,7 @@ const getBlogById = async (blogId) => {
     return blog.findById(blogId);
 };
 module.exports = {
-    createrBlog,
+    createBlog,
     blogList,
     deleteRecode,
     updateRecode,

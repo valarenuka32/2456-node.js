@@ -8,9 +8,9 @@ const router = express.Router();
 
 // create router
 router.post(
-    "/create-route",
-    validate(blogValidation.createrBlog),
-    blogController.createrBlog
+    "/create-blog",
+    validate(blogValidation.createBlog),
+    blogController.createBlog
 );
 
 // list
