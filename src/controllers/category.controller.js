@@ -1,7 +1,7 @@
 const { categoryService } = require("../services");
 
 // create
-const createCategory = async () => {
+const createCategory = async (req,res) => {
     try {
         const reqBody = req.body;
 

@@ -1,7 +1,7 @@
 const { blogService } = require("../services");
 
 // create
-const createBlog = async () => {
+const createBlog = async (req,res) => {
     try {
         const reqBody = req.body;
 

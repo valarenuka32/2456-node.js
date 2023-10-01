@@ -1,7 +1,7 @@
 const { imagesService } = require("../services");
 
 // create
-const createImage = async () => {
+const createImage = async (req,res) => {
     try {
         const reqBody = req.body;
 
