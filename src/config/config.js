@@ -21,7 +21,7 @@ if (error) {
 };
 
 module.exports = {
-    PORT: envVars.PORT,
+    port: envVars.PORT,
     mongodb: {
         url: envVars.MONGODB_URL,
         options: {

@@ -24,3 +24,17 @@ const generateToken = async (req, res) => {
         });
     }
 };
+
+// Verify token
+const verifyToken = async (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Token successfully verified!",
+        data: req.user,
+    });
+};
+
+module.exports = {
+    generateToken,
+    verifyToken
+};
