@@ -5,6 +5,12 @@ const createImage = async () => {
     try {
         const reqBody = req.body;
 
+        if (req.file) {
+            reqBody.blog_images = req.file.filename;
+        } else {
+            throw new Error("image is required");
+        }
+
         const images = await imagesService.createImage(reqBody);
         res.status(200).json({
             success: true,
