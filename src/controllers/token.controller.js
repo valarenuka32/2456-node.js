@@ -1,0 +1,26 @@
+const { tokenService } = require("../services");
+const moment = require("moment");
+
+// create token in jwt and save
+const generateToken = async (req, res) => {
+    try {
+        const reqBody = req.body;
+
+        reqBody.expire_time = moment().add(10, "minutes");
+
+        // create token jwt
+        const token = await tokenService.generateToken(reqBody);
+
+        reqBody.token = token;
+
+        // save token in database
+        const saveToken = await tokenService.saveToken(reqBody);
+        res.status(200).json({ success: true, message: "token created!", data: saveToken });
+
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message || "Something went wrong!",
+        });
+    }
+};
