@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const config = require("../config/config");
 
 const imagesSchema = new mongoose.Schema(
     {
@@ -10,9 +11,8 @@ const imagesSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        images: {
+        blog_images: {
             type: String,
-            trim: true,
         },
         is_active: {
             type: Boolean,
@@ -22,6 +22,13 @@ const imagesSchema = new mongoose.Schema(
     {
         timestamps: true,
         versionKey: false,
+        toJSON: {
+            transform: function (doc, data) {
+                if (data?.blog_images) {
+                    data.blog_images = `${config.base_url}blog_images/${data.blog_images}`;
+                }
+            },
+        },
     }
 );
 
