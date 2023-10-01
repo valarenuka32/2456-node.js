@@ -17,7 +17,7 @@ const createCategory = async (req,res) => {
 };
 
 // list
-const categoryList = async () => {
+const categoryList = async (req,res) => {
     try {
         const getList = await categoryService.categoryList();
         res.status(200).json({
@@ -31,7 +31,7 @@ const categoryList = async () => {
 };
 
 // update
-const updateRecode = async () => {
+const updateRecode = async (req,res) => {
     try {
         const categoryId = req.params.categoryId;
 
@@ -50,7 +50,7 @@ const updateRecode = async () => {
 };
 
 // delete
-const deleteRecode = async () => {
+const deleteRecode = async (req,res) => {
     try {
         const categoryId = res.params.req.body;
         const categoryEx = await categoryService.getcategoryById(categoryId);

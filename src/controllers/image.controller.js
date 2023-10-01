@@ -23,7 +23,7 @@ const createImage = async (req,res) => {
 };
 
 // list
-const imageList = async () => {
+const imageList = async (req,res) => {
     try {
         const getList = await imagesService.imageList();
         res.status(200).json({
@@ -37,7 +37,7 @@ const imageList = async () => {
 };
 
 // update
-const updateRecode = async () => {
+const updateRecode = async (req,res) => {
     try {
         const imagesId = req.params.imagesId;
 
@@ -56,7 +56,7 @@ const updateRecode = async () => {
 };
 
 // delete
-const deleteRecode = async () => {
+const deleteRecode = async (req,res) => {
     try {
         const imagesId = res.params.req.body;
         const imagesEx = await imagesService.getimagesById(imagesId);

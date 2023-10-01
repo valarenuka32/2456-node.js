@@ -15,13 +15,13 @@ router.post(
 
 // list
 router.get(
-    "list",
+    "/list",
     blogController.blogList
 );
 
 // update
 router.put(
-    "update-blog:blogId",
+    "/update-blog:blogId",
     blogController.updateRecode
 );
 

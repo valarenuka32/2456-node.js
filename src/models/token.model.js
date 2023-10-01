@@ -9,6 +9,10 @@ const tokenSchema = new mongoose.Schema(
             type: Date,
             default: null,
         },
+        user:{
+            type:mongoose.Types.ObjectId,
+            ref:"user"
+        },
         is_active: {
             type: Boolean,
             default: false,

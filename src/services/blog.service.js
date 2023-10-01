@@ -5,7 +5,8 @@ const createBlog = async (reqBody) => {
 };
 
 const blogList = async (req, res) => {
-    return blog.find();
+    return blog.find()
+    .populate("images");
 };
 
 const deleteRecode = async (blogId) => {

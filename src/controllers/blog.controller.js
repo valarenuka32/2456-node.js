@@ -17,7 +17,7 @@ const createBlog = async (req,res) => {
 };
 
 // list
-const blogList = async () => {
+const blogList = async (req,res) => {
     try {
         const getList = await blogService.blogList();
         res.status(200).json({
@@ -31,7 +31,7 @@ const blogList = async () => {
 };
 
 // update
-const updateRecode = async () => {
+const updateRecode = async (req,res) => {
     try {
         const blogId = req.params.blogId;
 
@@ -50,7 +50,7 @@ const updateRecode = async () => {
 };
 
 // delete
-const deleteRecode = async () => {
+const deleteRecode = async (req,res) => {
     try {
         const blogId = res.params.req.body;
         const blogEx = await blogService.getBlogById(blogId);

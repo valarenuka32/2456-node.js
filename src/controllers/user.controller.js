@@ -17,7 +17,7 @@ const createUser = async (req,res) => {
 };
 
 // list
-const userList = async () => {
+const userList = async (req,res) => {
     try {
         const getList = await userService.userList();
         res.status(200).json({
@@ -31,7 +31,7 @@ const userList = async () => {
 };
 
 // update
-const updateRecode = async () => {
+const updateRecode = async (req,res) => {
     try {
         const userId = req.params.userId;
 
@@ -50,7 +50,7 @@ const updateRecode = async () => {
 };
 
 // delete
-const deleteRecode = async () => {
+const deleteRecode = async (req,res) => {
     try {
         const userId = res.params.req.body;
         const userEx = await userService.getUserById(userId);

@@ -15,13 +15,13 @@ router.post(
 
 // list
 router.get(
-    "list",
+    "/list",
     userController.userList
 );
 
 // update
 router.put(
-    "update-user:userId",
+    "/update-user:userId",
     userController.updateRecode
 );
 

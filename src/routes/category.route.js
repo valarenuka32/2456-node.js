@@ -15,13 +15,13 @@ router.post(
 
 // list
 router.get(
-    "list",
+    "/list",
     categoryController.categoryList
 );
 
 // update
 router.put(
-    "update-category:categoryId",
+    "/update-category:categoryId",
     categoryController.updateRecode
 );
 
