@@ -14,6 +14,10 @@ const blogSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "images",
         },
+        category: {
+            type: mongoose.Types.ObjectId,
+            ref: "category",
+        },
         is_active: {
             type: Boolean,
             default: false,
