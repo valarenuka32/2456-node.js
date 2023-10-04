@@ -16,12 +16,13 @@ router.get(
     "/list",
     userController.userList
 );
+
 // update
 router.put(
     "/update-user:userId",
     userController.updateRecode
 );
-// update
+// delete
 router.delete(
     "/delete-user:userId",
     userController.deleteRecode

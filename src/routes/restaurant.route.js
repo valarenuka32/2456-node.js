@@ -2,13 +2,31 @@ const express = require("express");
 const { restaurantValidation } = require("../validations");
 const { restaurantController } = require("../controllers");
 const validate = require("../middlewares/validate");
-const { route } = require("./user.route");
 
 const router = express.Router();
 
+// create
 router.post(
     "/craete-restaurant",
     validate(restaurantValidation.createRestaurant),
     restaurantController.createRestaurant
+);
+
+// list
+router.get(
+    "/list",
+    restaurantController.restaurantList
+);
+
+// update
+router.put(
+    "/update-recode",
+    restaurantController.updateRecode
+);
+
+// delete
+router.delete(
+    "/delete-recode",
+    restaurantController.deleteRecode
 );
 module.exports = router;
