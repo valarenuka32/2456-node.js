@@ -6,3 +6,4 @@ module.exports.payment = require("./payment.model");
 module.exports.openinghours = require("./opening_hours.model");
 module.exports.city = require("./city.model");
 module.exports.country = require("./country.model");
+module.exports.state = require("./state.model");
