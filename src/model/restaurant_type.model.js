@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const restauranttypeRoute = new mongoose.Schema(
+const restauranttypeSchema = new mongoose.Schema(
     {
         restaurant_type: {
             type: String,
@@ -12,5 +12,5 @@ const restauranttypeRoute = new mongoose.Schema(
         versionKay: false,
     }
 );
-const restauranttype = mongoose.model("restauranttype", restauranttypeRoute);
+const restauranttype = mongoose.model("restauranttype", restauranttypeSchema);
 module.exports = restauranttype;

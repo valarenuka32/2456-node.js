@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const restaurantimgRoute = new mongoose.Schem(
+const restaurantimgSchema = new mongoose.Schem(
     {
         restaurant_image: {
             type: String,
@@ -12,5 +12,5 @@ const restaurantimgRoute = new mongoose.Schem(
         versionKey: false,
     }
 );
-const restaurantimage = mongoose.model("restaurantimage", restaurantimgRoute);
+const restaurantimage = mongoose.model("restaurantimage", restaurantimgSchema);
 module.exports = restaurantimage;
