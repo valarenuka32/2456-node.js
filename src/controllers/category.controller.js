@@ -1,7 +1,7 @@
 const { categoryService } = require("../services");
 
 // create
-const createCategory = async (req,res) => {
+const createCategory = async (req, res) => {
     try {
         const reqBody = req.body;
 
@@ -17,7 +17,7 @@ const createCategory = async (req,res) => {
 };
 
 // list
-const categoryList = async (req,res) => {
+const categoryList = async (req, res) => {
     try {
         const getList = await categoryService.categoryList();
         res.status(200).json({
@@ -31,7 +31,7 @@ const categoryList = async (req,res) => {
 };
 
 // update
-const updateRecode = async (req,res) => {
+const updateRecode = async (req, res) => {
     try {
         const categoryId = req.params.categoryId;
 
@@ -50,9 +50,10 @@ const updateRecode = async (req,res) => {
 };
 
 // delete
-const deleteRecode = async (req,res) => {
+const deleteRecode = async (req, res) => {
     try {
         const categoryId = res.params.req.body;
+
         const categoryEx = await categoryService.getcategoryById(categoryId);
         if (!categoryEx) {
             throw new Error("category detiles not found");

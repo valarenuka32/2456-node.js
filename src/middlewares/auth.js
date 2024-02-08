@@ -5,12 +5,14 @@ const config = require("../config/config");
 const auth = () => async (req, res, next) => {
     try {
         const token = req.headers.authorization;
+
         if (!token) {
             return next(res.status(401).json({
                 status: 401,
                 message: "Please authenticate!"
             }));
         }
+
         const decode = jwt.verify(
             token.replace("Bearer ", ""),
             config.jwt.secret_key

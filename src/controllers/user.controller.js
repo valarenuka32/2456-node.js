@@ -1,7 +1,7 @@
 const { userService } = require("../services");
 
 // create
-const createUser = async (req,res) => {
+const createUser = async (req, res) => {
     try {
         const reqBody = req.body;
 
@@ -17,7 +17,7 @@ const createUser = async (req,res) => {
 };
 
 // list
-const userList = async (req,res) => {
+const userList = async (req, res) => {
     try {
         const getList = await userService.userList();
         res.status(200).json({
@@ -31,7 +31,7 @@ const userList = async (req,res) => {
 };
 
 // update
-const updateRecode = async (req,res) => {
+const updateRecode = async (req, res) => {
     try {
         const userId = req.params.userId;
 
@@ -50,9 +50,10 @@ const updateRecode = async (req,res) => {
 };
 
 // delete
-const deleteRecode = async (req,res) => {
+const deleteRecode = async (req, res) => {
     try {
         const userId = res.params.req.body;
+
         const userEx = await userService.getUserById(userId);
         if (!userEx) {
             throw new Error("user detiles not found");

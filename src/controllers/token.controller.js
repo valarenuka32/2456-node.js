@@ -15,7 +15,7 @@ const generateToken = async (req, res) => {
 
         // save token in database
         const saveToken = await tokenService.saveToken(reqBody);
-        res.status(200).json({ success: true, message: "token created!", data: saveToken });
+        res.status(200).json({ success: true, message: "token created!.", data: saveToken });
 
     } catch (error) {
         res.status(400).json({

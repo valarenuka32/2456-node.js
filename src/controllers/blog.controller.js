@@ -1,11 +1,12 @@
 const { blogService } = require("../services");
 
 // create
-const createBlog = async (req,res) => {
+const createBlog = async (req, res) => {
     try {
         const reqBody = req.body;
 
         const blog = await blogService.createBlog(reqBody);
+
         res.status(200).json({
             success: true,
             message: "blog create successfully !",
@@ -17,7 +18,7 @@ const createBlog = async (req,res) => {
 };
 
 // list
-const blogList = async (req,res) => {
+const blogList = async (req, res) => {
     try {
         const getList = await blogService.blogList();
         res.status(200).json({
@@ -31,7 +32,7 @@ const blogList = async (req,res) => {
 };
 
 // update
-const updateRecode = async (req,res) => {
+const updateRecode = async (req, res) => {
     try {
         const blogId = req.params.blogId;
 
@@ -50,7 +51,7 @@ const updateRecode = async (req,res) => {
 };
 
 // delete
-const deleteRecode = async (req,res) => {
+const deleteRecode = async (req, res) => {
     try {
         const blogId = res.params.req.body;
         const blogEx = await blogService.getBlogById(blogId);

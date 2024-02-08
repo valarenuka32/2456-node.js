@@ -6,7 +6,7 @@ const tokenSchema = new mongoose.Schema(
             type: String,
         },
         expire_time: {
-            type: Date,
+            type: Date.now(),
             default: null,
         },
         user:{

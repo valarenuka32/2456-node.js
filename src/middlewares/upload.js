@@ -2,7 +2,7 @@ const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
 
-// img uplode
+// img uplode using multer
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         if (file.fieldname == "blog_images") {

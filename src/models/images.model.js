@@ -22,6 +22,7 @@ const imagesSchema = new mongoose.Schema(
     {
         timestamps: true,
         versionKey: false,
+
         toJSON: {
             transform: function (doc, data) {
                 if (data?.blog_images) {

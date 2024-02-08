@@ -1,7 +1,7 @@
 const { imagesService } = require("../services");
 
 // create
-const createImage = async (req,res) => {
+const createImage = async (req, res) => {
     try {
         const reqBody = req.body;
 
@@ -23,7 +23,7 @@ const createImage = async (req,res) => {
 };
 
 // list
-const imageList = async (req,res) => {
+const imageList = async (req, res) => {
     try {
         const getList = await imagesService.imageList();
         res.status(200).json({
@@ -37,7 +37,7 @@ const imageList = async (req,res) => {
 };
 
 // update
-const updateRecode = async (req,res) => {
+const updateRecode = async (req, res) => {
     try {
         const imagesId = req.params.imagesId;
 
@@ -56,9 +56,10 @@ const updateRecode = async (req,res) => {
 };
 
 // delete
-const deleteRecode = async (req,res) => {
+const deleteRecode = async (req, res) => {
     try {
         const imagesId = res.params.req.body;
+
         const imagesEx = await imagesService.getimagesById(imagesId);
         if (!imagesEx) {
             throw new Error("images detiles not found");
