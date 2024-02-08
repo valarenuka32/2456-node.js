@@ -17,8 +17,10 @@ app.use(bodyParser.json());
 
 app.use(express.static(`./public`));
 
+// namespce
 app.use("/v1", routes);
 
+// http server
 const server = http.createServer(app);
 
 server.listen(config.port, () => {
