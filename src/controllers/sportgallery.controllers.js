@@ -43,6 +43,7 @@ const sportGalleryList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const sportgalleryId = req.params.sportgalleryId;
+
         const sportgalleryEx = await sportgalleryService.getsportgalleryById(sportgalleryId);
         if (!sportgalleryEx) {
             throw new Error("sportgallery detiles not found!");

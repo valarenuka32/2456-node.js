@@ -6,7 +6,7 @@ const createContect_us = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        const contect_us=await contect_usService.createContect_us(reqBody);
+        const contect_us = await contect_usService.createContect_us(reqBody);
 
         res.status(200).json({
             success: true,
@@ -37,6 +37,7 @@ const contect_usList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const contect_usId = req.params.contect_usId;
+
         const contect_usEx = await contect_usService.getcontect_usById(contect_usId);
         if (!contect_usEx) {
             throw new Error("contect_us detiles not found!");

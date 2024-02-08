@@ -42,6 +42,7 @@ const userList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const userId = req.params.userId;
+
         const userEx = await userService.getUserById(userId);
         if (!userEx) {
             throw new Error("user detiles not found!");

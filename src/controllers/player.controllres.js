@@ -37,6 +37,7 @@ const playerList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const playerId = req.params.playerId;
+
         const playerEx = await playerService.getplayerById(playerId);
         if (!playerEx) {
             throw new Error("player detiles not found!");

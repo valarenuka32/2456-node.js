@@ -37,6 +37,7 @@ const tournamentList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const tournamentId = req.params.tournamentId;
+
         const tournamentEx = await tournamentService.gettournamentById(tournamentId);
         if (!tournamentEx) {
             throw new Error("tournament detiles not found!");

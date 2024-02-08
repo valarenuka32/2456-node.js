@@ -37,6 +37,7 @@ const resultList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const resultId = req.params.resultId;
+
         const resultEx = await resultService.getresultById(resultId);
         if (!resultEx) {
             throw new Error("result detiles not found!");

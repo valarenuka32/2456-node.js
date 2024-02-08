@@ -11,7 +11,7 @@ const createCoach = async (req, res) => {
         res.status(200).json({
             success: true,
             message: "coach detiles create successfully!",
-            data: { coach },
+            data: coach ,
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
@@ -33,7 +33,7 @@ const coachList = async (req, res) => {
     }
 };
 
-// // delete list
+// delete list
 const deleteRecord = async (req, res) => {
     try {
         const coachId = req.params.coachId;

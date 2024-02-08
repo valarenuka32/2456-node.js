@@ -37,6 +37,7 @@ const teamList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const teamId = req.params.teamId;
+
         const teamEx = await teamService.getteamById(teamId);
         if (!teamEx) {
             throw new Error("team detiles not found!");

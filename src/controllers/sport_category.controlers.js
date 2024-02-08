@@ -6,7 +6,7 @@ const createSportCategory = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        const sport_category=await sport_categoryService.createSportCategory(reqBody);
+        const sport_category = await sport_categoryService.createSportCategory(reqBody);
 
         res.status(200).json({
             success: true,
@@ -37,6 +37,7 @@ const sportCtegoryList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const sport_categoryId = req.params.sport_categoryId;
+
         const sport_categoryEx = await sport_categoryService.getsportCtegoryById(sport_categoryId);
         if (!sport_categoryEx) {
             throw new Error("sport_category detiles not found!");

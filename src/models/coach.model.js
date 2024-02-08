@@ -13,6 +13,10 @@ const coachSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        contect_no: {
+            type: Number,
+            default: 0,
+        },
         specializations: {
             type: String,
             trim: true,

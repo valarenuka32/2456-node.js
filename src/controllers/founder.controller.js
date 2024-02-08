@@ -6,7 +6,7 @@ const createFounder = async (req, res) => {
         const reqBody = req.body;
         console.log(reqBody);
 
-        const founder=await founderService.createFounder(reqBody);
+        const founder = await founderService.createFounder(reqBody);
 
         res.status(200).json({
             success: true,
@@ -37,6 +37,7 @@ const founderList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const founderId = req.params.founderId;
+
         const founderEx = await founderService.getfounderById(founderId);
         if (!founderEx) {
             throw new Error("founder detiles not found!");

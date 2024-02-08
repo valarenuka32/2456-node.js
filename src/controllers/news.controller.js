@@ -37,6 +37,7 @@ const newsList = async (req, res) => {
 const deleteRecord = async (req, res) => {
     try {
         const newsId = req.params.newsId;
+
         const newsEx = await newsService.getnewsById(newsId);
         if (!newsEx) {
             throw new Error("news detiles not found!");
